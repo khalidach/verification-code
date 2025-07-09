@@ -1,0 +1,11 @@
+# This file tells Netlify how to build and deploy your site.
+[build]
+  # This is the directory where your serverless functions are located.
+  functions = "netlify/functions"
+
+# This is a redirect rule to make your function accessible at a cleaner URL.
+# Instead of /.netlify/functions/verify, you can call /api/verify.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
